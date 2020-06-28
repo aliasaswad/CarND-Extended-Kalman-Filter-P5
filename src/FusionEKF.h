@@ -46,4 +46,4 @@ class FusionEKF {
   Eigen::MatrixXd Hj_;
 };
 
-#endif // FusionEKF_H_
+#endif /** FusionEKF_H_ */
