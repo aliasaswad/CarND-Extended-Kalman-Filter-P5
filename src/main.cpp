@@ -150,9 +150,23 @@ int main() {
 
   }); // end h.onMessage
 
+  
   h.onConnection([&h](uWS::WebSocket<uWS::SERVER> ws, uWS::HttpRequest req) {
     std::cout << "Connected!!!" << std::endl;
   });
+
+  // we are not using http
+  h.onHttpRequest([](uWS::HttpResponse *res, uWS::HttpRequest req, char *data, size_t, size_t) {
+    const std::string s = "<h1>Hello world!</h1>";
+    if (req.getUrl().valueLength == 1)
+    {
+      res->end(s.data(), s.length());
+    }
+    else
+    {
+      // i guess this should be done more gracefully?
+      res->end(nullptr, 0);
+  }
 
   h.onDisconnection([&h](uWS::WebSocket<uWS::SERVER> ws, int code, 
                          char *message, size_t length) {
