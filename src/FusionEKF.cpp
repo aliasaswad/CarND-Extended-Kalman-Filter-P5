@@ -71,7 +71,7 @@ void FusionEKF::ProcessMeasurement(const MeasurementPackage &measurement_pack) {
     if (measurement_pack.sensor_type_ == MeasurementPackage::RADAR) {
       /** Convert radar from polar to cartesian coordinates 
       *         and initialize state. */
-      cout << "EKF : First RADAR measurement" << endl;
+      cout << "EKF: RADAR measurement" << endl;
       double rho = measurement_pack.raw_measurements_[0]; /** range */
       double phi = measurement_pack.raw_measurements_[1]; /** bearing */
       double rho_dot = measurement_pack.raw_measurements_[2]; /** velocity of rho */
@@ -84,9 +84,9 @@ void FusionEKF::ProcessMeasurement(const MeasurementPackage &measurement_pack) {
       if ( y < 0.0001 ) {
         y = 0.0001;
       }
-      double vx = rho_dot * cos(phi);
-      double vy = rho_dot * sin(phi);
-      ekf_.x_ << x, y, vx , vy;
+      double v_x = rho_dot * cos(phi);
+      double v_y = rho_dot * sin(phi);
+      ekf_.x_ << x, y, v_x , v_y;
     }
     else if (measurement_pack.sensor_type_ == MeasurementPackage::LASER) {
       /** Initialize state. 
