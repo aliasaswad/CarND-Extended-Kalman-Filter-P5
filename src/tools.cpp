@@ -4,6 +4,8 @@
 using Eigen::VectorXd;
 using Eigen::MatrixXd;
 using std::vector;
+using std::cout;
+using std::endl;
 
 Tools::Tools() {}
 
@@ -50,7 +52,7 @@ MatrixXd Tools::CalculateJacobian(const VectorXd& x_state) {
    */
   MatrixXd Jac(3,4);
   if(x_state.size() != 4) {
-    cout << "ERROR - CalculateJacobian-The state vector must be size 4." << endl;
+    cout << "ERROR: CalculateJacobian-State vec. must be size 4." << endl;
     return Jac;
   }
   	
@@ -59,20 +61,20 @@ MatrixXd Tools::CalculateJacobian(const VectorXd& x_state) {
 	double py = x_state(1);
 	double vx = x_state(2);
 	double vy = x_state(3);
-	//Pre-compute a set of terms to avoid repeated calculation
+	//Precompute a set of terms to avoid repeated calculation
 	double c1 = px*px+py*py;
 	double c2 = sqrt(c1);
 	double c3 = (c1*c2);
 	//check division by zero
 	if(fabs(c1) < 0.0001){
-		cout << "ERROR - CalculateJacobian () - Division by Zero" << endl;
+		cout << "ERROR: CalculateJacobian()-Division by Zero" << endl;
 		return Jac;
 	}
 
 	//compute the Jacobian matrix
-	  Jac << (px/c2)              , (py/c2)              , 0     , 0,
-          -(py/c1)             , (px/c1)              , 0     , 0,
-          py*(vx*py - vy*px)/c3, px*(px*vy - py*vx)/c3, px/c2 , py/c2;
+	Jac << (px/c2)              , (py/c2)              , 0     , 0,
+         -(py/c1)             , (px/c1)              , 0     , 0,
+         py*(vx*py - vy*px)/c3, px*(px*vy - py*vx)/c3, px/c2 , py/c2;
 
 	return Jac;
 }
