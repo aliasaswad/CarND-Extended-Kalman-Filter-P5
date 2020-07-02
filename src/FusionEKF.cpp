@@ -133,10 +133,10 @@ void FusionEKF::ProcessMeasurement(const MeasurementPackage &measurement_pack) {
   double dt_4_4 = dt_4 / 4; //dt^4/4
   double dt_3_2 = dt_3 / 2; //dt^3/2
   ekf_.Q_ = MatrixXd(4, 4);
-  ekf_.Q_ << dt_4_4 * noise_ax, 0, dt_3_2 * noise_ax, 0,
-           0, dt_4_4 * noise_ay, 0, dt_3_2 * noise_ay,
-           dt_3_2 * noise_ax, 0, dt_2 * noise_ax, 0,
-           0, dt_3_2 * noise_ay, 0, dt_2 * noise_ay;
+  ekf_.Q_ << dt_4_over_4 * noise_ax, 0					  , dt_3_over_2 * noise_ax, 0,
+            0					   , dt_4_over_4 * noise_ay, 0					  , dt_3_over_2 * noise_ay,
+            dt_3_over_2 * noise_ax , 0					   , dt_2 * noise_ax	  , 0,
+            0					   , dt_3_over_2 * noise_ay, 0					  , dt_2 * noise_ay;
 
   ekf_.Predict();
 
