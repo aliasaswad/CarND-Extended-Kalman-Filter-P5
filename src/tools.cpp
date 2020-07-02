@@ -48,10 +48,10 @@ MatrixXd Tools::CalculateJacobian(const VectorXd& x_state) {
   /**
    * Calculate a Jacobian here.
    */
-  MatrixXd Hj(3,4);
+  MatrixXd Jac(3,4);
   if(x_state.size() != 4) {
     cout << "ERROR - CalculateJacobian-The state vector must be size 4." << endl;
-    return Hj;
+    return Jac;
   }
   	
 	//Recover state parameters
@@ -66,13 +66,13 @@ MatrixXd Tools::CalculateJacobian(const VectorXd& x_state) {
 	//check division by zero
 	if(fabs(c1) < 0.0001){
 		cout << "ERROR - CalculateJacobian () - Division by Zero" << endl;
-		return Hj;
+		return Jac;
 	}
 
 	//compute the Jacobian matrix
-	  Hj << (px/c2)              , (py/c2)              , 0     , 0,
+	  Jac << (px/c2)              , (py/c2)              , 0     , 0,
           -(py/c1)             , (px/c1)              , 0     , 0,
           py*(vx*py - vy*px)/c3, px*(px*vy - py*vx)/c3, px/c2 , py/c2;
 
-	return Hj;
+	return Jac;
 }
