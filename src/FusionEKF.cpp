@@ -91,12 +91,12 @@ void FusionEKF::ProcessMeasurement(const MeasurementPackage &measurement_pack) {
     else if (measurement_pack.sensor_type_ == MeasurementPackage::LASER) {
       /** Initialize state. 
        *  No velocity and coordinates are cartesian already. */
-      cout << "EKF : First LASER measurement" << endl;
+      cout << "EKF: LASER measurement" << endl;
       ekf_.x_ << measurement_pack.raw_measurements_[0], measurement_pack.raw_measurements_[1], 0, 0;
 
     }
     /** Saving first timestamp in seconds */
-    previous_timestamp_ = measurement_pack.timestamp_ ;
+    previous_timestamp_ = measurement_pack.timestamp_;
     /** done initializing, no need to predict or update */
     is_initialized_ = true;
     return;
