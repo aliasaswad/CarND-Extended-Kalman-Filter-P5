@@ -45,8 +45,11 @@ Once the install for uWebSocketIO is complete, clone the project's () repository
 2. `cd build`
 3. `cmake ..`
 4. `make`, this will create two executables
-        *`ExtendedKF`, which is EKF implementation
-        *`Test`, a simple unit tests using [Catch](https://github.com/catchorg/Catch2/blob/master/docs/tutorial.md)
+
+        * `ExtendedKF`, which is EKF implementation
+        
+        * `Test`, a simple unit tests using [Catch](https://github.com/catchorg/Catch2/blob/master/docs/tutorial.md)
+        
 5. Finally, run `./ExtendedKF`
 
 
