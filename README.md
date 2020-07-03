@@ -21,9 +21,10 @@ I used C++ to implement the [Extended Kalman Filter](https://en.wikipedia.org/wi
 
 The minimum project dependency versions are (for Linux OS):
 
-cmake: [3.5](https://cmake.org/install/) 
-make: 4.1 (make is installed by default on most Linux distros)
-gcc/g++: 5.4 (gcc / g++ is installed by default on most Linux distros)
+* cmake: [3.5](https://cmake.org/install/) 
+* make: 4.1 (make is installed by default on most Linux distros)
+* gcc/g++: 5.4 (gcc / g++ is installed by default on most Linux distros)
+* 
 
 #### uWebSocketIO Starter Guide
 This project involve using an open source package called [uWebSocketIO](https://github.com/uWebSockets/uWebSockets). This package facilitates the same connection between the simulator and code that was used in the Term 1 Behavioral Cloning Project, but now with C++. The package does this by setting up a web socket server connection from the C++ program to the simulator, which acts as the host. In the project repository there are two scripts for installing uWebSocketIO - one for Linux and the other for macOS.
