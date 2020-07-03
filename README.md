@@ -17,14 +17,22 @@ I used C++ to implement the [Extended Kalman Filter](https://en.wikipedia.org/wi
 <img src="./results/simulator.png" width="900" height="500" align="center"/>
 
 
-# Prerequisites
+## Important Dependencies
 
-The minimum project dependency versions are (for Linux OS):
+The minimum project dependency versions are:
 
-* cmake: [3.5](https://cmake.org/install/) 
-* make: 4.1 (make is installed by default on most Linux distros)
-* gcc/g++: 5.4 (gcc / g++ is installed by default on most Linux distros)
+* cmake >= 3.5
+  * All OSes: [click here for installation instructions](https://cmake.org/install/)
+* make >= 4.1 (Linux, Mac), 3.81 (Windows)
+  * Linux: make is installed by default on most Linux distros
+  * Mac: [install Xcode command line tools to get make](https://developer.apple.com/xcode/features/)
+  * Windows: [Click here for installation instructions](http://gnuwin32.sourceforge.net/packages/make.htm)
+* gcc/g++ >= 5.4
+  * Linux: gcc / g++ is installed by default on most Linux distros
+  * Mac: same deal as make - [install Xcode command line tools](https://developer.apple.com/xcode/features/)
+  * Windows: recommend using [MinGW](http://www.mingw.org/)
 * Udacity's simulator
+
 
 #### uWebSocketIO Starter Guide
 The package does this by setting up a web socket server connection from the C++ program to the simulator, which acts as the host. In the project repository there are two scripts for installing uWebSocketIO - one for Linux and the other for macOS.
@@ -37,19 +45,16 @@ This repository includes two files that can be used to set up and install [uWebS
 The particular project implementation was done on **Linux OS** and the rest of this documentation will be focused on Linux OS. The project support both Mac and Windows operating system. In order to install the necessary libraries, from the project repository directory run the script [install-mac.sh](https://github.com/aliasaswad/CarND-Extended-Kalman-Filter-P5/blob/master/install-linux.sh).
 
 
-# Compiling and executing the project
+## Basic Build Instructions
     
-Once the install for uWebSocketIO is complete, clone the project's () repository and cd to it. The main program can be built and run by doing the following from the project top directory.
+Once the install for uWebSocketIO is complete, clone [CarND-Extended-Kalman-Filter-Project](https://github.com/udacity/CarND-Extended-Kalman-Filter-Project) the project's repository and cd to it. The main program can be built and run by doing the following from the project top directory.
 
-1. Create the build directory `mkdir build`
-2. `cd build`
-3. `cmake ..`
+1. Create a build directory: `mkdir build && cd build`
+3. Compile:`cmake ..`
 4. `make`, this will create two executables
     -  `ExtendedKF`, which is EKF implementation
     - `Test`, a simple unit tests using [Catch](https://github.com/catchorg/Catch2/blob/master/docs/tutorial.md)    
 5. Finally, run `./ExtendedKF`
-
-
 
 
 Note that the programs that need to be written to accomplish the project are src/FusionEKF.cpp, src/FusionEKF.h, kalman_filter.cpp, kalman_filter.h, tools.cpp, and tools.h
@@ -80,26 +85,8 @@ Here is the main protocol that main.cpp uses for uWebSocketIO in communicating w
 
 ---
 
-## Other Important Dependencies
 
-* cmake >= 3.5
-  * All OSes: [click here for installation instructions](https://cmake.org/install/)
-* make >= 4.1 (Linux, Mac), 3.81 (Windows)
-  * Linux: make is installed by default on most Linux distros
-  * Mac: [install Xcode command line tools to get make](https://developer.apple.com/xcode/features/)
-  * Windows: [Click here for installation instructions](http://gnuwin32.sourceforge.net/packages/make.htm)
-* gcc/g++ >= 5.4
-  * Linux: gcc / g++ is installed by default on most Linux distros
-  * Mac: same deal as make - [install Xcode command line tools](https://developer.apple.com/xcode/features/)
-  * Windows: recommend using [MinGW](http://www.mingw.org/)
 
-## Basic Build Instructions
-
-1. Clone this repo.
-2. Make a build directory: `mkdir build && cd build`
-3. Compile: `cmake .. && make` 
-   * On windows, you may need to run: `cmake .. -G "Unix Makefiles" && make`
-4. Run it: `./ExtendedKF `
 
 ## Editor Settings
 
