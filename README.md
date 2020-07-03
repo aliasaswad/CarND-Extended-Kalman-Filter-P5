@@ -14,7 +14,7 @@ In this project I utilized a kalman filter to estimate the state of a moving obj
 
 I used C++ to implement the [Extended Kalman Filter](https://en.wikipedia.org/wiki/Extended_Kalman_filter). This project involves a Simulator which can be downloaded [here](https://github.com/udacity/self-driving-car-sim/releases), that provided by [Udacity](https://www.udacity.com/course/self-driving-car-engineer-nanodegree--nd013). The simulator providing simulated RADAR and LIDAR measurements and the Extended Kalman Filter(EKF) must fusion those measurements to predict the position of the object that travels around the vehicle. The communication between the simulator and the EKF is done using WebSocket using the uWebSockets implementation on the EKF side. RADAR measurements are blue circles with an arrow pointing in the direction of the observed angle, LIDAR measurements are red circles, and estimation markers are green triangles.  The image below shows what the simulator looks like.
 
-<img src="./results/simulator.png" width="800" height="400" align="center"/>
+<img src="./results/simulator.png" width="900" height="500" align="center"/>
 
 
 
