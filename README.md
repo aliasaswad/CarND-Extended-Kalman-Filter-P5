@@ -45,16 +45,47 @@ This repository includes two files that can be used to set up and install [uWebS
 The particular project implementation was done on **Linux OS** and the rest of this documentation will be focused on Linux OS. The project support both Mac and Windows operating system. In order to install the necessary libraries, from the project repository directory run the script [install-mac.sh](https://github.com/aliasaswad/CarND-Extended-Kalman-Filter-P5/blob/master/install-linux.sh).
 
 
-## Basic Build Instructions
+# Basic Build Instructions
     
 Once the install for uWebSocketIO is complete, clone [CarND-Extended-Kalman-Filter-Project](https://github.com/udacity/CarND-Extended-Kalman-Filter-Project) the project's repository and cd to it. The main program can be built and run by doing the following from the project top directory.
 
 1. Create a build directory: `mkdir build && cd build`
 3. Compile:`cmake ..`
-4. `make`, this will create two executables
+4. `make`, this will create executable
     -  `ExtendedKF`, which is EKF implementation
-    - `Test`, a simple unit tests using [Catch](https://github.com/catchorg/Catch2/blob/master/docs/tutorial.md)    
+<!--     - `Test`, a simple unit tests using [Catch](https://github.com/catchorg/Catch2/blob/master/docs/tutorial.md)     -->
 5. Finally, run `./ExtendedKF`
+
+
+<!-- 
+# Running the tests
+
+Inside the build directory, execute `./Tests` file . The output should be something similar to this:
+
+`ERROR - CalculateRMSE () - The estimations vector is empty
+ERROR - CalculateRMSE () - The ground-truth vector is empty
+ERROR - CalculateRMSE () - The ground-truth and estimations vectors must have the same size.
+ERROR - CalculateJacobian () - The state vector must have size 4.
+ERROR - CalculateJacobian () - Division by Zero
+===============================================================================
+All tests passed (13 assertions in 2 test cases)`
+
+These unit tests were an experiment with [Catch](). It looks like a good and simple unit testing framework for C++.
+ -->
+
+
+# Running the Filter
+
+
+to run the EKF we need to run both `./ExtendedKF` From the build directory using the terminal and th simulator. The output for running `./ExtendedKF` file should be like:
+
+`Listening to port 4567
+Connected!!!`
+
+Which means that the implemtation code now connected to the simulator right away as shown in the image below:
+
+<img src="./results/ready.png" width="900" height="500" align="center"/>
+
 
 
 Here is the main protocol that main.cpp uses for uWebSocketIO in communicating with the simulator.
