@@ -106,7 +106,7 @@ The github repo contains one data file, `obj_pose-laser-radar-synthetic-input.tx
 
 Here is a screenshot of the first data file:
 
-|<img src="./results/laser_radar_data.png" width="800" height="350" align="center"/>
+|<img src="./results/laser_radar_data.png" width="800" height="300" align="center"/>
 |:--:| 
 |*Screenshot of Data File*|
 
