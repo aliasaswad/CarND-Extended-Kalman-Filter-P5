@@ -104,10 +104,20 @@ Here is the simulator final state after running the EKL with dataset 2:
 
 **px, py, vx, vy** output coordinates must have an **RMSE** <= [0.11, 0.11, 0.52, 0.52] when using the file: [`obj_pose-laser-radar-synthetic-input.txt`](https://github.com/aliasaswad/CarND-Extended-Kalman-Filter-P5/tree/master/data) which is the same data file the simulator uses for Dataset 1".
 
-The EKF accuracy was:
+The EKF **accuracy** is:
 
 * Dataset 1: RMSE <= [0.0973, 0.0855, 0.4513, 0.4399]
 * Dataset 2: RMSE <= [0.0726, 0.0965, 0.4216, 0.4932]
+
+## Algorithm implementation
+
+The Kalman filter implementation can be found under the [`src`](https://github.com/aliasaswad/CarND-Extended-Kalman-Filter-P5/tree/master/src) directory.  Kalmen filter file, named [`kalman_filter.cpp`](https://github.com/aliasaswad/CarND-Extended-Kalman-Filter-P5/blob/master/src/kalman_filter.cpp) is used to predict at [`FusionEKF.cpp`](https://github.com/aliasaswad/CarND-Extended-Kalman-Filter-P5/blob/master/src/FusionEKF.cpp) line 141 and to update code_line [152 to 164](https://github.com/aliasaswad/CarND-Extended-Kalman-Filter-P5/blob/master/src/FusionEKF.cpp#L152-#L164).
+
+
+
+
+
+
 
 
 Here is the main protocol that main.cpp uses for uWebSocketIO in communicating with the simulator.
