@@ -93,11 +93,11 @@ The simulator provides two datasets (1 and 2). The difference between them are:
 
 Here is the simulator final state after running the EKL with dataset 1:
 
-<img src="./results/Dataset1_zoom_out.png" width="800" height="300" align="center"/>
+<img src="./results/Dataset1_zoom_out.png" width="800" height="350" align="center"/>
 
 Here is the simulator final state after running the EKL with dataset 2:
 
-<img src="./results/Dataset2_zoom_out.png" width="800" height="300" align="center"/>
+<img src="./results/Dataset2_zoom_out.png" width="800" height="350" align="center"/>
 
 Here is the main protocol that main.cpp uses for uWebSocketIO in communicating with the simulator.
 
