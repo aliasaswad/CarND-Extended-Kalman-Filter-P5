@@ -100,6 +100,17 @@ Here is the simulator final state after running the EKL with dataset 2:
 <img src="./results/Dataset2_zoom_out.png" width="800" height="350" align="center"/>
 
 
+## EKF Data
+
+The github repo contains one data file, `obj_pose-laser-radar-synthetic-input.txt` that provided by Udacity. The simulator will be using this data file, and feed main.cpp values from it one line at a time.
+
+Here is a screenshot of the first data file:
+
+|<img src="./results/laser_radar_data.png" width="800" height="350" align="center"/>
+|:--:| 
+|*Screenshot of Data File*|
+
+
 ## Accuracy
 
 **px, py, vx, vy** output coordinates must have an **RMSE** <= [0.11, 0.11, 0.52, 0.52] when using the file: [`obj_pose-laser-radar-synthetic-input.txt`](https://github.com/aliasaswad/CarND-Extended-Kalman-Filter-P5/tree/master/data) which is the same data file the simulator uses for Dataset 1".
