@@ -99,6 +99,17 @@ Here is the simulator final state after running the EKL with dataset 2:
 
 <img src="./results/Dataset2_zoom_out.png" width="800" height="350" align="center"/>
 
+
+## Accuracy
+
+**px, py, vx, vy** output coordinates must have an **RMSE** <= [0.11, 0.11, 0.52, 0.52] when using the file: [`obj_pose-laser-radar-synthetic-input.txt`](https://github.com/aliasaswad/CarND-Extended-Kalman-Filter-P5/tree/master/data) which is the same data file the simulator uses for Dataset 1".
+
+The EKF accuracy was:
+
+* Dataset 1: RMSE <= [0.0973, 0.0855, 0.4513, 0.4399]
+* Dataset 2: RMSE <= [0.0726, 0.0965, 0.4216, 0.4932]
+
+
 Here is the main protocol that main.cpp uses for uWebSocketIO in communicating with the simulator.
 
 
