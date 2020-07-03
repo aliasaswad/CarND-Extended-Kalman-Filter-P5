@@ -84,7 +84,7 @@ Connected!!!`
 
 Which means that the implemtation code now connected to the simulator right away as shown in the image below:
 
-<img src="./results/ready.png" width="900" height="500" align="center"/>
+<img src="./results/ready.png" width="900" height="400" align="center"/>
 
 
 
