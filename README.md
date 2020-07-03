@@ -24,29 +24,33 @@ The minimum project dependency versions are (for Linux OS):
 * cmake: [3.5](https://cmake.org/install/) 
 * make: 4.1 (make is installed by default on most Linux distros)
 * gcc/g++: 5.4 (gcc / g++ is installed by default on most Linux distros)
-* 
+* Udacity's simulator
 
 #### uWebSocketIO Starter Guide
-This project involve using an open source package called [uWebSocketIO](https://github.com/uWebSockets/uWebSockets). This package facilitates the same connection between the simulator and code that was used in the Term 1 Behavioral Cloning Project, but now with C++. The package does this by setting up a web socket server connection from the C++ program to the simulator, which acts as the host. In the project repository there are two scripts for installing uWebSocketIO - one for Linux and the other for macOS.
+The package does this by setting up a web socket server connection from the C++ program to the simulator, which acts as the host. In the project repository there are two scripts for installing uWebSocketIO - one for Linux and the other for macOS.
 
 Note: Only uWebSocketIO branch e94b6e1, which the scripts reference, is compatible with the package installation.
 
 This repository includes two files that can be used to set up and install [uWebSocketIO](https://github.com/uWebSockets/uWebSockets) for either Linux or Mac systems. For windows you can use either Docker, VMware, or even [Windows 10 Bash on Ubuntu](https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/) to install uWebSocketIO. Please see the uWebSocketIO Starter Guide page in the classroom within the EKF Project lesson for the required version and installation scripts.
 
-#### Linux Installation:
-From the project repository directory run the script: `install-ubuntu.sh`
+
+The particular project implementation was done on **Linux OS** and the rest of this documentation will be focused on Linux OS. The project support both Mac and Windows operating system. In order to install the necessary libraries, from the project repository directory run the script [install-mac.sh](https://github.com/aliasaswad/CarND-Extended-Kalman-Filter-P5/blob/master/install-linux.sh).
+
+
+# Compiling and executing the project
+    
+Once the install for uWebSocketIO is complete, clone the project's () repository and cd to it. The main program can be built and run by doing the following from the project top directory.
+
+1. Create the build directory `mkdir build`
+2. `cd build`
+3. `cmake ..`
+4. `make`, this will create two executables
+        * `ExtendedKF`, which is EKF implementation
+        * `Test`, a simple unit tests using [Catch](https://github.com/catchorg/Catch2/blob/master/docs/tutorial.md)
+5. Finally, run `./ExtendedKF`
 
 
 
-Once the install for uWebSocketIO is complete, the main program can be built and run by doing the following from the project top directory.
-
-1. mkdir build
-2. cd build
-3. cmake ..
-4. make
-5. ./ExtendedKF
-
-Tips for setting up your environment can be found in the classroom lesson for this project.
 
 Note that the programs that need to be written to accomplish the project are src/FusionEKF.cpp, src/FusionEKF.h, kalman_filter.cpp, kalman_filter.h, tools.cpp, and tools.h
 
