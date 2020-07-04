@@ -124,7 +124,7 @@ The EKF **accuracy** is:
 
 ## Algorithm implementation
 
-**Overview of a Kalman Filter: Initialize, Predict, Update**
+### Overview of a Kalman Filter: Initialize, Predict, Update
 
 To program the extended Kalman filter has three main steps for programming a Kalman filter:
 
@@ -140,7 +140,7 @@ These three steps (initialize, predict, update) plus calculating RMSE encapsulat
 
 The Kalman filter implementation can be found under the [`src`](https://github.com/aliasaswad/CarND-Extended-Kalman-Filter-P5/tree/master/src) directory.  Kalmen filter file, named [`kalman_filter.cpp`](https://github.com/aliasaswad/CarND-Extended-Kalman-Filter-P5/blob/master/src/kalman_filter.cpp) is used to predict at [`FusionEKF.cpp`](https://github.com/aliasaswad/CarND-Extended-Kalman-Filter-P5/blob/master/src/FusionEKF.cpp) code_line [141](https://github.com/aliasaswad/CarND-Extended-Kalman-Filter-P5/blob/master/src/FusionEKF.cpp#L141) and to update code_line [152 to 164](https://github.com/aliasaswad/CarND-Extended-Kalman-Filter-P5/blob/master/src/FusionEKF.cpp#L152-#L164).
 
-**How the Files Relate to Each Other**
+### How the Files Relate to Each Other
 
 Here is a brief overview of what happens when you run the code files:
 
@@ -153,32 +153,9 @@ Here is a brief overview of what happens when you run the code files:
 
 
 
+## Code Efficiency
 
-
-
-Here is the main protocol that main.cpp uses for uWebSocketIO in communicating with the simulator.
-
-
-**INPUT**: values provided by the simulator to the c++ program
-
-["sensor_measurement"] => the measurement that the simulator observed (either lidar or radar)
-
-
-**OUTPUT**: values provided by the c++ program to the simulator
-
-["estimate_x"] <= kalman filter estimated position x
-
-["estimate_y"] <= kalman filter estimated position y
-
-["rmse_x"]
-
-["rmse_y"]
-
-["rmse_vx"]
-
-["rmse_vy"]
-
----
+The algorithm avoid unnecessary calculations. An example of this calculation optimization is when the ***Q*** matrix is calculated under the file [`FusionEKF.cpp`](https://github.com/aliasaswad/CarND-Extended-Kalman-Filter-P5/blob/master/src/FusionEKF.cpp) code_line [130 to 139](https://github.com/aliasaswad/CarND-Extended-Kalman-Filter-P5/blob/master/src/FusionEKF.cpp#L130-#L139).
 
 
 
