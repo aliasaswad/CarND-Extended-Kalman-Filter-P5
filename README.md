@@ -148,7 +148,7 @@ Here is a brief overview of what happens when you run the code files:
 
 2. `FusionEKF.cpp` takes the sensor data and initializes variables and updates variables. The Kalman filter equations are not in this file. `FusionEKF.cpp` has a variable called [`ekf_`](https://github.com/aliasaswad/CarND-Extended-Kalman-Filter-P5/blob/master/src/FusionEKF.cpp#L39), which is an instance of a [`KalmanFilter`](https://github.com/aliasaswad/CarND-Extended-Kalman-Filter-P5/blob/master/src/kalman_filter.cpp#L11) class. The `ekf_` will hold the matrix and vector values. You will also use the ekf_ instance to call the predict and update equations.
 
-3. The `KalmanFilter` class is defined in `kalman_filter.cpp` and `kalman_filter.h`.
+3. The `KalmanFilter` class is defined in `kalman_filter.cpp` and [`kalman_filter.h`](https://github.com/aliasaswad/CarND-Extended-Kalman-Filter-P5/blob/master/src/kalman_filter.h#L6).
 
 
 
