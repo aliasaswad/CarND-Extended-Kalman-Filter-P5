@@ -124,6 +124,22 @@ The EKF **accuracy** is:
 
 ## Algorithm implementation
 
+**Overview of a Kalman Filter: Initialize, Predict, Update**
+
+To program the extended Kalman filter has three main steps for programming a Kalman filter:
+
+* **initializing** Kalman filter variables
+* **predicting** where our object is going to be after a time step \Delta{t}Δt
+* **updating** where our object is based on sensor measurements
+
+Then the prediction and update steps repeat themselves in a loop.
+
+To measure how well our Kalman filter performs, we will then calculate root mean squared error comparing the Kalman filter results with the provided ground truth.
+
+These three steps (initialize, predict, update) plus calculating RMSE encapsulate the entire extended Kalman filter project.
+
+
+
 The Kalman filter implementation can be found under the [`src`](https://github.com/aliasaswad/CarND-Extended-Kalman-Filter-P5/tree/master/src) directory.  Kalmen filter file, named [`kalman_filter.cpp`](https://github.com/aliasaswad/CarND-Extended-Kalman-Filter-P5/blob/master/src/kalman_filter.cpp) is used to predict at [`FusionEKF.cpp`](https://github.com/aliasaswad/CarND-Extended-Kalman-Filter-P5/blob/master/src/FusionEKF.cpp) code_line [141](https://github.com/aliasaswad/CarND-Extended-Kalman-Filter-P5/blob/master/src/FusionEKF.cpp#L141) and to update code_line [152 to 164](https://github.com/aliasaswad/CarND-Extended-Kalman-Filter-P5/blob/master/src/FusionEKF.cpp#L152-#L164).
 
 
