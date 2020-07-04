@@ -103,7 +103,7 @@ Here is the simulator final state after running the EKL with dataset 2:
 ## EKF Data
 
 The github repo contains one data file, `obj_pose-laser-radar-synthetic-input.txt` that provided by Udacity. The simulator will be using this data file, and feed [`main.cpp`](https://github.com/aliasaswad/CarND-Extended-Kalman-Filter-P5/blob/master/src/main.cpp) values from it, one line at a time. The `main.cpp` file creates instances of a **MeasurementPackage**. 
-The measurement data for each line gets pushed onto a `measurement_pack_list`. The ground truth [p <sub>x</sub>, p <sub>y</sub>, v <sub>x</sub>, v <sub>y</sub>] for each line in the data file gets pushed ontoground_truthso RMSE can be calculated later from tools.cpp.
+The measurement data for each line gets pushed onto a `measurement_pack_list`. The ground truth [p<sub>x</sub>, p<sub>y</sub>, v<sub>x</sub>, v<sub>y</sub>] for each line in the data file gets pushed ontoground_truthso RMSE can be calculated later from tools.cpp.
 
 Here is a screenshot of the first data file:
 
