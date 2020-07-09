@@ -50,11 +50,11 @@ The particular project implementation was done on **Linux OS** and the rest of t
 Once the install for uWebSocketIO is complete, clone [CarND-Extended-Kalman-Filter-Project](https://github.com/udacity/CarND-Extended-Kalman-Filter-Project) the project's repository and cd to it. The main program can be built and run by doing the following from the project top directory.
 
 1. Create a build directory: `mkdir build && cd build`
-3. Compile:`cmake ..`
-4. `make`, this will create executable
+2. Compile:`cmake ..`
+3. `make`, this will create executable
     -  `ExtendedKF`, which is EKF implementation
 <!--     - `Test`, a simple unit tests using [Catch](https://github.com/catchorg/Catch2/blob/master/docs/tutorial.md)     -->
-5. Finally, run `./ExtendedKF`
+4. Finally, run `./ExtendedKF`
 
 
 <!-- 
