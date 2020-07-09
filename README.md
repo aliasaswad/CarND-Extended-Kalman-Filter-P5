@@ -77,7 +77,7 @@ These unit tests were an experiment with [Catch](). It looks like a good and sim
 # Running the Filter
 
 
-to run the EKF we need to run both `./ExtendedKF` From the build directory using the terminal and th simulator. The output for running `./ExtendedKF` file should be like:
+To run the EKF we need to run both `./ExtendedKF` From the build directory using the terminal and the simulator. The output for running `./ExtendedKF` file should be like:
 
 `Listening to port 4567
 Connected!!!`
